@@ -14,3 +14,7 @@ Ssl Smtp Server with c++ openssl sockets and STARTTLS
 <br> (create .pem - copy all certs,keys,ca_bundle to one file)
 <br> certificate.pem, private.key - without password
 
+### Send email test
+openssl s_client -connect localhost:25 -starttls smtp
+
+
