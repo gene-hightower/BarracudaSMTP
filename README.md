@@ -1,17 +1,16 @@
 # BarracudaSMTP - smtp server example (C++)
 Ssl Smtp Server with c++ openssl sockets and STARTTLS
 
-//=====================================================================<br>
-<br> Install
+### Install
 <br> apt-get install openssl libssl-dev g++
 <br>
-<br> Compile
+### Compile
 <br> g++ -o BaracudaSMTP main.cpp starttls.cpp starttls.h -lssl -lcrypto -L. -I.
 <br>
-<br> Create TLS certs (very simple): 
+### Create TLS certs (very simple): 
 <br> https://www.sslforfree.com/
 <br>
-<br> Add certificate to main folder 
+### Add certificate to main folder 
 <br> (create .pem - copy all certs,keys,ca_bundle to one file)
 <br> certificate.pem, private.key - without password
-<br>=====================================================================
+
