@@ -5,7 +5,7 @@ Ssl Smtp Server with c++ openssl sockets and STARTTLS
 <br> apt-get install openssl libssl-dev g++
 <br>
 ### Compile
-<br> g++ -o BaracudaSMTP main.cpp starttls.cpp starttls.h -lssl -lcrypto -L. -I.
+<br> g++ -o BarsacudaSMTP main.cpp starttls.cpp starttls.h -lssl -lcrypto -L. -I.
 <br>
 ### Create TLS certs (very simple): 
 <br> https://www.sslforfree.com/
