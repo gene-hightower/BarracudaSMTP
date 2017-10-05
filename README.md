@@ -1,4 +1,4 @@
-# BaracudaSMTP - smtp server example (C++)
+# BarracudaSMTP - smtp server example (C++)
 Ssl Smtp Server with c++ openssl sockets and STARTTLS
 
 //=====================================================================<br>
