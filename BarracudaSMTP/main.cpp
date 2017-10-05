@@ -98,7 +98,10 @@ int main(int argc, char const *argv[])
     int sock = create_socket(25);
 
     char *welcome = (char*)"220 example.com SMTP\r\n";
-    char *ehlo = (char*)"250-example.com at your service\r\n250-SIZE 157286400\r\n250 SMTPUTF8\r\n";
+    // z tls
+    char *ehlo = (char*)"250-example.com at your service\r\n250-SIZE 157286400\r\n250-STARTTLS\r\n250 SMTPUTF8\r\n";
+    // bez tls		
+    // char *ehlo = (char*)"250-example.com at your service\r\n250-SIZE 157286400\r\n250 SMTPUTF8\r\n";
     char *ok = (char*)"250 Ok\r\n";
     char *data = (char*)"354 send data\r\n";
     char *end = (char*)"250 email was send\r\n";
@@ -150,7 +153,7 @@ int main(int argc, char const *argv[])
             valread = read(client,buffer,8192);
             printf("Client send %s\n",buffer );
             memset(buffer,0,sizeof(buffer));
-            char e1[] = "250-example.com\r\n250-STARTTLS\r\n250 HELP\r\n";           
+            char e1[] = "250-example.com\r\n250-STARTTLS\r\n250 SMTPUTF8\r\n";           
             send(client,e1,strlen(e1),0);
 
             // client send    
