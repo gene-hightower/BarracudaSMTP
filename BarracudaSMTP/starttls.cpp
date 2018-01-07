@@ -68,9 +68,6 @@ void Ssl::Start(string Certificate, string CertificateKey, int client)
     // ShowCerts(ssl);
     if (SSL_accept(ssl) <= 0) {
         ERR_print_errors_fp(stderr);
-    } else {
-        const char reply00[] = "220 TLS working, go ahead \r\n";
-        SSL_write(ssl, reply00, strlen(reply00));
     }
 // magic 
 // SSL_set_accept_state(ssl);
